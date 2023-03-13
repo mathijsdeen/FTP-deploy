@@ -1,0 +1,32 @@
+name: 'Deploy using FTP'
+author: 'Mathijs Deen <info@mathijsdeen.com>'
+description: 'Deploy (directory of) repository to server using FTP.'
+inputs:
+  host:
+    description: 'FTP host'
+    required: true
+  user:
+    description: 'FTP username'
+    required: true
+  password:
+    description: 'FTP password'
+    required: true
+  forceSSL:
+    description: 'Force SSL encryption'
+    required: false
+    default: 'false'
+  options:
+    description: 'Additional mirror command options'
+    required: false
+    default: ''
+  localDir:
+    description: 'Local directory'
+    required: false
+    default: '.'
+  remoteDir:
+    description: 'Remote directory'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
