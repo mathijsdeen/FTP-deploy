@@ -29,7 +29,7 @@ jobs:
 
 Be sure to add repository secrets `FTP_SERVER`, `FTP_USERNAME` and `FTP_PASSWORD` through the `Settings` button in your repository (`Settings` -> `Secrets and variables` -> `Actions` -> `New repository secret`). The case above initiates the FTP upload when changes get pushed to the `main` branch. Multiple branches can be specified by separating them with a comma (e.g., `[ main, dev ]`). To trigger the upload on every push, replace the three lines
 
-```
+```yaml
 on:
   push:
     branches: [ main ]
